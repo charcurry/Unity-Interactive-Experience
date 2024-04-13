@@ -7,11 +7,13 @@ using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
-    private int pickups = 0;
+    //private int pickups = 0;
 
     public bool parameter;
+    public InteractableObject parameterGameObject;
+    public bool isPickedUp = false;
 
-    private GameObject scoreText;
+    //private GameObject scoreText;
     private GameObject characterText;
     public string text;
 
@@ -27,8 +29,19 @@ public class InteractableObject : MonoBehaviour
 
     public void Start()
     {
-        scoreText = GameObject.Find("Score Text");
+        //scoreText = GameObject.Find("Score Text");
         characterText = GameObject.Find("Character Text");
+    }
+
+    public void Update()
+    {
+        if (parameterGameObject != null)
+        {
+            if (this.type == ObjectType.Dialogue && parameterGameObject.isPickedUp)
+            {
+                parameter = true;
+            }
+        }
     }
 
     public ObjectType type;
@@ -58,10 +71,11 @@ public class InteractableObject : MonoBehaviour
 
     private void Pickup()
     {
-        pickups++;
-        scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + pickups.ToString();
+        //pickups++;
+        //scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + pickups.ToString();
         //Debug.Log("Picked Up Item!");
-        Destroy(gameObject);
+        isPickedUp = true;
+        gameObject.SetActive(false);
     }
 
     private void Dialogue()

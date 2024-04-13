@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     private UIManager uiManager;
 
+    //public GameObject[] level1Interactables;
+    //public GameObject[] level2Interactables;
+
     private CharacterController2D player;
     public GameObject playerSprite;
     public GameObject spawnPoint;

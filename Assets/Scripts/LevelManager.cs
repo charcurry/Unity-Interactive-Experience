@@ -13,6 +13,11 @@ public class LevelManager : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
     }
 
+    private void Update()
+    {
+        SceneLoadDebug();
+    }
+
     public void LoadScene(string levelName)
     {
         previousScene = SceneManager.GetActiveScene().name;
@@ -22,6 +27,39 @@ public class LevelManager : MonoBehaviour
         {
             gameManager.gameState = GameManager.GameState.Gameplay;
         }
+        //if (levelName == "Gameplay_Town1")
+        //{
+        //    foreach (GameObject gameObject in gameManager.level1Interactables)
+        //    {
+        //        gameObject.SetActive(true);
+        //    }
+        //    foreach (GameObject gameObject in gameManager.level2Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //}
+        //if (!levelName.StartsWith("Gameplay"))
+        //{
+        //    foreach (GameObject gameObject in gameManager.level1Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //    foreach (GameObject gameObject in gameManager.level2Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //}
+        //if (levelName == "Gameplay_Town2")
+        //{
+        //    foreach (GameObject gameObject in gameManager.level1Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //    foreach (GameObject gameObject in gameManager.level2Interactables)
+        //    {
+        //        gameObject.SetActive(true);
+        //    }
+        //}
         if (levelName == "Settings")
         {
             gameManager.gameState = GameManager.GameState.Settings;
@@ -53,14 +91,50 @@ public class LevelManager : MonoBehaviour
         {
             gameManager.gameState = GameManager.GameState.MainMenu;
         }
+        //if (previousScene == "Gameplay_Town1")
+        //{
+        //    foreach (GameObject gameObject in gameManager.level1Interactables)
+        //    {
+        //        gameObject.SetActive(true);
+        //    }
+        //    foreach (GameObject gameObject in gameManager.level2Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //}
+        //if (!previousScene.StartsWith("Gameplay"))
+        //{
+        //    foreach (GameObject gameObject in gameManager.level1Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //    foreach (GameObject gameObject in gameManager.level2Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //}
+        //if (previousScene == "Gameplay_Town2")
+        //{
+        //    foreach (GameObject gameObject in gameManager.level1Interactables)
+        //    {
+        //        gameObject.SetActive(false);
+        //    }
+        //    foreach (GameObject gameObject in gameManager.level2Interactables)
+        //    {
+        //        gameObject.SetActive(true);
+        //    }
+        //}
         SceneManager.LoadScene(previousScene);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         gameManager.spawnPoint = GameObject.FindWithTag("SpawnPoint");
+        if (scene.name == "Gameplay_Town1" && previousScene != "MainMenu")
+        {
+            gameManager.spawnPoint.transform.position = new Vector2(60, -1);
+        }
         gameManager.MovePlayerToSpawnPoint();
-
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -68,5 +142,20 @@ public class LevelManager : MonoBehaviour
     {
         gameManager.MovePlayerToPreviousLocation();
         SceneManager.sceneLoaded -= OnPreviousSceneLoaded;
+    }
+
+    void SceneLoadDebug()
+    {
+        if (Input.GetKey(KeyCode.RightBracket))
+        {
+            Debug.Log("load next level");
+            SceneManager.LoadScene(-SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        if (Input.GetKey(KeyCode.LeftBracket))
+        {
+            Debug.Log("load previous level");
+            SceneManager.LoadScene(-SceneManager.GetActiveScene().buildIndex - 1);
+        }
     }
 }
