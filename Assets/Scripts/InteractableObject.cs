@@ -11,11 +11,19 @@ public class InteractableObject : MonoBehaviour
 
     public bool parameter;
     public InteractableObject parameterGameObject;
+    public InteractableObject nextObject;
     public bool isPickedUp = false;
+
+    public bool winOnTalk;
+
+    public string scene;
+    public bool active = false;
 
     //private GameObject scoreText;
     private GameObject characterText;
     public string text;
+
+    public LevelManager levelManager;
 
     public string[] sentencesIncomplete;
     public string[] sentencesComplete;
@@ -31,6 +39,7 @@ public class InteractableObject : MonoBehaviour
     {
         //scoreText = GameObject.Find("Score Text");
         characterText = GameObject.Find("Character Text");
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     public void Update()
@@ -75,21 +84,35 @@ public class InteractableObject : MonoBehaviour
         //scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + pickups.ToString();
         //Debug.Log("Picked Up Item!");
         isPickedUp = true;
+        active = false;
         gameObject.SetActive(false);
     }
 
     private void Dialogue()
     {
         FindObjectOfType<GameManager>().gameState = GameManager.GameState.Dialogue;
-        if (parameter)
+        if (nextObject != null) 
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(sentencesComplete);
+            if (parameter)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(sentencesComplete, this);
+                nextObject.active = true;
+            }
+            else if (!parameter)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(sentencesIncomplete, this);
+            }
         }
-        else if (!parameter)
+        if (parameter && winOnTalk)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(sentencesIncomplete);
-        }
+            UnityEngine.Debug.Log("startWinDialogue");
+            FindObjectOfType<DialogueManager>().StartDialogue(sentencesComplete, this);
 
+        }
+        else if (!parameter && winOnTalk)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(sentencesIncomplete, this);
+        }
     }
 
     IEnumerator DeleteText()

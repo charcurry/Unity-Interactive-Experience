@@ -388,7 +388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &39082870
 Transform:
   m_ObjectHideFlags: 0
@@ -398,7 +398,7 @@ Transform:
   m_GameObject: {fileID: 39082869}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.65, y: -3, z: 0.96723604}
+  m_LocalPosition: {x: 39.64, y: -3, z: 0.96723604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -418,8 +418,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 0
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete: []
   sentencesComplete: []
   type: 0
@@ -1318,7 +1323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &336915146
 Transform:
   m_ObjectHideFlags: 0
@@ -1328,7 +1333,7 @@ Transform:
   m_GameObject: {fileID: 336915145}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.83, y: -3, z: 0.96723604}
+  m_LocalPosition: {x: 29.07, y: -17.16, z: 0.96723604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1348,8 +1353,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 0
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete: []
   sentencesComplete: []
   type: 0
@@ -1685,7 +1695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &350509068
 Transform:
   m_ObjectHideFlags: 0
@@ -1715,16 +1725,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 430788553}
+  nextObject: {fileID: 1562170696}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town1
+  active: 1
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete:
-  - Hi! I'm Looking for a pumpkin to bake my delicious pumpkin pie!
-  - I think that someone with black hair has my pumpkin...
+  - Hi! Ms. Pumpkin and I'm Looking for a pumpkin to bake my delicious pumpkin pie!
+  - I think that my pumpkin is over on the other side of town!
   - If you find it let me know, ok?
   sentencesComplete:
   - Wow! You found my pumpkin!
   - Thanks so much!
-  - Here! Take this apple!
+  - Maybe see if someone else needs some help!
+  - I saw that Mr. Spud seemed to be in a spot of bother!
   type: 2
 --- !u!58 &350509070
 CircleCollider2D:
@@ -2058,7 +2074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &425605440
 Transform:
   m_ObjectHideFlags: 0
@@ -2068,7 +2084,7 @@ Transform:
   m_GameObject: {fileID: 425605439}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.88, y: -7.24, z: 0.96723604}
+  m_LocalPosition: {x: 13, y: -10, z: 0.96723604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2088,16 +2104,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 1306411626}
+  nextObject: {fileID: 39082871}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 1
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete:
-  - Hi! I'm Looking for a pumpkin to bake my delicious pumpkin pie!
-  - I think that someone with black hair has my pumpkin...
-  - If you find it let me know, ok?
+  - Hello there! How are you today? My name is Mr. Mato!
+  - I'm not doing too great...
+  - I've lost my prized tomato and I don't know where it is!
+  - Is there any way you can help me?
   sentencesComplete:
-  - Wow! You found my pumpkin!
-  - Thanks so much!
-  - Here! Take this apple!
+  - Wow! Thank you so much for finding that tomato for me!
+  - I think I saw Mr. Carrot looking for something...
+  - Maybe it would be worth checking out!
   type: 2
 --- !u!58 &425605442
 CircleCollider2D:
@@ -2297,7 +2319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &430788547
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2450,7 +2472,7 @@ Transform:
   m_GameObject: {fileID: 430788546}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: -3, z: 0.96723604}
+  m_LocalPosition: {x: 22, y: 13, z: 0.96723604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2505,8 +2527,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 1
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete: []
   sentencesComplete: []
   type: 0
@@ -3020,7 +3047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &610449254
 Transform:
   m_ObjectHideFlags: 0
@@ -3030,7 +3057,7 @@ Transform:
   m_GameObject: {fileID: 610449253}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.1, y: -4, z: 0.96723604}
+  m_LocalPosition: {x: 28.5, y: -4, z: 0.96723604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3050,16 +3077,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 1562170696}
+  nextObject: {fileID: 1306411626}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 1
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete:
-  - Hi! I'm Looking for a pumpkin to bake my delicious pumpkin pie!
-  - I think that someone with black hair has my pumpkin...
-  - If you find it let me know, ok?
+  - Hello there! I don't believe we've met. My name is Mr. Spud.
+  - I've got a little favour to ask you if you dont mind...
+  - I've lost my potato recently and was wondering if you could find it for me?
+  - I would be quite happy if you did!
   sentencesComplete:
-  - Wow! You found my pumpkin!
-  - Thanks so much!
-  - Here! Take this apple!
+  - Thank you so much for finding my potato!
+  - Speaking of which, I saw Mr. Mato looking pretty sad...
+  - Maybe you should see whats going on with him?
+  - See you later now!
   type: 2
 --- !u!58 &610449256
 CircleCollider2D:
@@ -3556,19 +3590,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ba73cb4177381418d298ec8da30e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level1Interactables:
-  - {fileID: 430788546}
-  - {fileID: 1562170694}
-  - {fileID: 350509067}
-  - {fileID: 425605439}
-  - {fileID: 1843947852}
-  level2Interactables:
-  - {fileID: 39082869}
-  - {fileID: 1306411624}
-  - {fileID: 336915145}
-  - {fileID: 860262586}
-  - {fileID: 610449253}
-  - {fileID: 1235122968}
+  interactables:
+  - {fileID: 430788553}
+  - {fileID: 1562170696}
+  - {fileID: 39082871}
+  - {fileID: 1306411626}
+  - {fileID: 336915147}
+  - {fileID: 1843947853}
+  - {fileID: 769701535}
+  - {fileID: 350509069}
+  - {fileID: 425605441}
+  - {fileID: 860262588}
+  - {fileID: 610449255}
+  - {fileID: 1235122970}
   playerSprite: {fileID: 3706285193571887901}
   spawnPoint: {fileID: 0}
   lastPlayerPosition: {x: 0, y: 0}
@@ -3756,6 +3790,9 @@ Transform:
   - {fileID: 336915146}
   - {fileID: 1843947858}
   - {fileID: 769701534}
+  - {fileID: 1320272440}
+  - {fileID: 1458414735}
+  - {fileID: 1803424547}
   - {fileID: 350509068}
   - {fileID: 425605440}
   - {fileID: 860262587}
@@ -4114,8 +4151,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 1
   text: Hmm... The sign says to go to the left to go back the rest of town...
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete: []
   sentencesComplete: []
   type: 1
@@ -4698,7 +4740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &860262587
 Transform:
   m_ObjectHideFlags: 0
@@ -4728,16 +4770,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 39082871}
+  nextObject: {fileID: 336915147}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town1
+  active: 1
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete:
-  - Hi! I'm Looking for a pumpkin to bake my delicious pumpkin pie!
-  - I think that someone with black hair has my pumpkin...
-  - If you find it let me know, ok?
+  - Hi! My name is Mr. Carrot! How are you today?
+  - I've been better...
+  - I seem to have lost my prize-winning carrot recently!
+  - Is there any way you can help with that?
   sentencesComplete:
-  - Wow! You found my pumpkin!
-  - Thanks so much!
-  - Here! Take this apple!
+  - Gee! Thanks so much for finding my carrot!
+  - I really appreaciate it!
+  - Speaking of which, theres one last person I saw moping around about missing goods...
+  - Mr. Bean is in a bit of a tizzy looking for his missing beans.
   type: 2
 --- !u!58 &860262589
 CircleCollider2D:
@@ -5672,7 +5721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1235122969
 Transform:
   m_ObjectHideFlags: 0
@@ -5702,16 +5751,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 336915147}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 1
+  scene: Gameplay_Town1
+  active: 1
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete:
-  - Hi! I'm Looking for a pumpkin to bake my delicious pumpkin pie!
-  - I think that someone with black hair has my pumpkin...
-  - If you find it let me know, ok?
+  - Hello there, my name is Mr. Bean.
+  - There seems to be a bit of a missing produce problem with everyone, huh?
+  - In that case, I have something I need to ask you to find as well.
+  - I'm missing my prized beans and any help can be appreciated!
   sentencesComplete:
-  - Wow! You found my pumpkin!
-  - Thanks so much!
-  - Here! Take this apple!
+  - Hey! Thanks for finding my beans!
+  - Now everyone seems a lot happier!
+  - Thanks so much for all your hard work!
   type: 2
 --- !u!58 &1235122971
 CircleCollider2D:
@@ -6078,7 +6133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1306411625
 Transform:
   m_ObjectHideFlags: 0
@@ -6088,7 +6143,7 @@ Transform:
   m_GameObject: {fileID: 1306411624}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.81, y: -3, z: 0.96723604}
+  m_LocalPosition: {x: -1.44, y: 5.77, z: 0.96723604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6108,8 +6163,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town1
+  active: 0
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete: []
   sentencesComplete: []
   type: 0
@@ -6425,6 +6485,245 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313335874}
   m_CullTransparentMesh: 1
+--- !u!1 &1320272439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320272440}
+  - component: {fileID: 1320272445}
+  - component: {fileID: 1320272444}
+  - component: {fileID: 1320272443}
+  - component: {fileID: 1320272442}
+  - component: {fileID: 1320272441}
+  m_Layer: 0
+  m_Name: Sign3
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320272440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320272439}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24, y: 8.5, z: 0.96723604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 708842202}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320272441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320272439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fa4e545020ed74c85afd7764faac27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameter: 0
+  parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
+  isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town1
+  active: 1
+  text: The sign is saying that the pumpkin is around here, but on the other side
+    of town...
+  levelManager: {fileID: 1645840270}
+  sentencesIncomplete: []
+  sentencesComplete: []
+  type: 1
+--- !u!58 &1320272442
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320272439}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!60 &1320272443
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320272439}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.3125}
+    newSize: {x: 1.5, y: 1.3125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3125, y: 0.5}
+      - {x: -0.5, y: 0.3125}
+      - {x: -0.5, y: -0.3125}
+      - {x: -0.3125, y: -0.5}
+      - {x: 0.3125, y: -0.5}
+      - {x: 0.5, y: -0.3125}
+      - {x: 0.5, y: 0.3125}
+      - {x: 0.3125, y: 0.5}
+  m_UseDelaunayMesh: 0
+--- !u!1839735485 &1320272444
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320272439}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!212 &1320272445
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320272439}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 1f7e783ffb864ea4390ef39dc9405a64, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 1.3125}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1334735065
 GameObject:
   m_ObjectHideFlags: 0
@@ -6830,6 +7129,244 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411803305}
   m_CullTransparentMesh: 1
+--- !u!1 &1458414734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458414735}
+  - component: {fileID: 1458414740}
+  - component: {fileID: 1458414739}
+  - component: {fileID: 1458414738}
+  - component: {fileID: 1458414737}
+  - component: {fileID: 1458414736}
+  m_Layer: 0
+  m_Name: Sign4
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1458414735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458414734}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.85, y: -18.5, z: 0.96723604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 708842202}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458414736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458414734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fa4e545020ed74c85afd7764faac27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameter: 0
+  parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
+  isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town1
+  active: 1
+  text: Looks like the beans can be found around this area on the other side of town...
+  levelManager: {fileID: 1645840270}
+  sentencesIncomplete: []
+  sentencesComplete: []
+  type: 1
+--- !u!58 &1458414737
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458414734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!60 &1458414738
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458414734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.3125}
+    newSize: {x: 1.5, y: 1.3125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3125, y: 0.5}
+      - {x: -0.5, y: 0.3125}
+      - {x: -0.5, y: -0.3125}
+      - {x: -0.3125, y: -0.5}
+      - {x: 0.3125, y: -0.5}
+      - {x: 0.5, y: -0.3125}
+      - {x: 0.5, y: 0.3125}
+      - {x: 0.3125, y: 0.5}
+  m_UseDelaunayMesh: 0
+--- !u!1839735485 &1458414739
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458414734}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!212 &1458414740
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458414734}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 1f7e783ffb864ea4390ef39dc9405a64, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 1.3125}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1532643794
 GameObject:
   m_ObjectHideFlags: 0
@@ -6878,6 +7415,9 @@ MonoBehaviour:
   dialogueText: {fileID: 874613282}
   player: {fileID: 3746557956694483059}
   animator: {fileID: 460841826291297441}
+  levelManager: {fileID: 1645840270}
+  objectToWinWith: {fileID: 1235122970}
+  currentInteractableObject: {fileID: 0}
   isActive: 0
   typeSpeed: 0.015
 --- !u!1 &1562170694
@@ -6900,7 +7440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1562170695
 Transform:
   m_ObjectHideFlags: 0
@@ -6910,7 +7450,7 @@ Transform:
   m_GameObject: {fileID: 1562170694}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.03, y: -3, z: 0.96723604}
+  m_LocalPosition: {x: 15.15, y: -16.88, z: 0.96723604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6930,8 +7470,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 0
   text: 
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete: []
   sentencesComplete: []
   type: 0
@@ -7878,6 +8423,245 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727867778}
   m_CullTransparentMesh: 1
+--- !u!1 &1803424546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803424547}
+  - component: {fileID: 1803424552}
+  - component: {fileID: 1803424551}
+  - component: {fileID: 1803424550}
+  - component: {fileID: 1803424549}
+  - component: {fileID: 1803424548}
+  m_Layer: 0
+  m_Name: Sign5
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1803424547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803424546}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 6.1, z: 0.96723604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 708842202}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803424548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803424546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fa4e545020ed74c85afd7764faac27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameter: 0
+  parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
+  isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town2
+  active: 1
+  text: Hmm... Seems like the tomato can be found around here on the other side of
+    town...
+  levelManager: {fileID: 1645840270}
+  sentencesIncomplete: []
+  sentencesComplete: []
+  type: 1
+--- !u!58 &1803424549
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803424546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!60 &1803424550
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803424546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.3125}
+    newSize: {x: 1.5, y: 1.3125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3125, y: 0.5}
+      - {x: -0.5, y: 0.3125}
+      - {x: -0.5, y: -0.3125}
+      - {x: -0.3125, y: -0.5}
+      - {x: 0.3125, y: -0.5}
+      - {x: 0.5, y: -0.3125}
+      - {x: 0.5, y: 0.3125}
+      - {x: 0.3125, y: 0.5}
+  m_UseDelaunayMesh: 0
+--- !u!1839735485 &1803424551
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803424546}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!212 &1803424552
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803424546}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 1f7e783ffb864ea4390ef39dc9405a64, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 1.3125}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1843947852
 GameObject:
   m_ObjectHideFlags: 0
@@ -7898,7 +8682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1843947853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7913,8 +8697,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameter: 0
   parameterGameObject: {fileID: 0}
+  nextObject: {fileID: 0}
   isPickedUp: 0
+  winOnTalk: 0
+  scene: Gameplay_Town1
+  active: 1
   text: Hmm... The sign says to go to the right to see the rest of town...
+  levelManager: {fileID: 1645840270}
   sentencesIncomplete: []
   sentencesComplete: []
   type: 1

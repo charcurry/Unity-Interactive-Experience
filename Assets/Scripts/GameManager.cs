@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     private UIManager uiManager;
 
-    //public GameObject[] level1Interactables;
+    public InteractableObject[] interactables;
     //public GameObject[] level2Interactables;
 
     private CharacterController2D player;

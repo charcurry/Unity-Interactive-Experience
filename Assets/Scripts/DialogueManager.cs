@@ -11,6 +11,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject player;
     public Animator animator;
 
+    public LevelManager levelManager;
+
+    public InteractableObject objectToWinWith;
+
+    public InteractableObject currentInteractableObject;
+
     private bool isTyping = false;
     private bool cancelTyping = false;
 
@@ -24,10 +30,12 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogue = new Queue<string>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
-    public void StartDialogue(string[] sentences)
+    public void StartDialogue(string[] sentences, InteractableObject currentObject)
     {
+        currentInteractableObject = currentObject;
         dialogue.Clear();
         dialogueUI.SetActive(true);
         isActive = true;
@@ -94,9 +102,20 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        ResumePlayerControl();
-        isActive = false;
-        dialogueUI.SetActive(false);
-        FindObjectOfType<GameManager>().gameState = GameManager.GameState.Gameplay;
+        if (currentInteractableObject == objectToWinWith && currentInteractableObject.parameter && currentInteractableObject.winOnTalk) 
+        {
+            levelManager.LoadScene("GameWin");
+            ResumePlayerControl();
+            isActive = false;
+            dialogueUI.SetActive(false);
+            FindObjectOfType<GameManager>().gameState = GameManager.GameState.GameWin;
+        }
+        else
+        {
+            ResumePlayerControl();
+            isActive = false;
+            dialogueUI.SetActive(false);
+            FindObjectOfType<GameManager>().gameState = GameManager.GameState.Gameplay;
+        }
     }
 }
