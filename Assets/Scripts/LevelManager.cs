@@ -143,24 +143,6 @@ public class LevelManager : MonoBehaviour
         gameManager.spawnPoint = GameObject.FindWithTag("SpawnPoint");
         if (scene.name == "Gameplay_Town1" && previousScene != "MainMenu")
         {
-            gameManager.MovePlayerToSpawnPoint();
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-            return;
-        }
-        else if (scene.name == "Gameplay_Town1" && previousScene != "GameWin")
-        {
-            gameManager.MovePlayerToSpawnPoint();
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-            return;
-        }
-        else if (scene.name == "Gameplay_Town1" && previousScene != "GameOver")
-        {
-            gameManager.MovePlayerToSpawnPoint();
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-            return;
-        }
-        else if (scene.name == "Gameplay_Town1" && previousScene == "Gameplay_Town2")
-        {
             gameManager.spawnPoint.transform.position = new Vector2(60, -1);
         }
         gameManager.MovePlayerToSpawnPoint();
