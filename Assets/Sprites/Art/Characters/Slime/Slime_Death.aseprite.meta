@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -270,6 +272,7 @@ ScriptedImporter:
     cells:
     - name: Slime_Death_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -278,6 +281,7 @@ ScriptedImporter:
       spriteId: 3dd6e696da5a71244be658049af43c4a
     - name: Slime_Death_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 1
@@ -286,6 +290,7 @@ ScriptedImporter:
       spriteId: abe7c55d24e07904b8d354c7add8ff1c
     - name: Slime_Death_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -294,6 +299,7 @@ ScriptedImporter:
       spriteId: 4b22a91e3025c6d43b9652d19153b142
     - name: Slime_Death_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 1
@@ -302,6 +308,7 @@ ScriptedImporter:
       spriteId: ae45b926b7690ff469663088ae88c70b
     - name: Slime_Death_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -310,6 +317,7 @@ ScriptedImporter:
       spriteId: 18c8a6c68bba0234c90d44146bb7a8b6
     - name: Slime_Death_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -318,6 +326,7 @@ ScriptedImporter:
       spriteId: 27608683997ab9c4db414242cdd59f23
     - name: Slime_Death_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -327,6 +336,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 128}

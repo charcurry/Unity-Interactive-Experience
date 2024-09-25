@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -250,6 +252,7 @@ ScriptedImporter:
     cells:
     - name: Slime_Attack_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 1
@@ -258,6 +261,7 @@ ScriptedImporter:
       spriteId: e8ca6fb459a796143b8236a3e660b477
     - name: Slime_Attack_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 1
@@ -266,6 +270,7 @@ ScriptedImporter:
       spriteId: dcae87710959b704fbff8b238f0c5eff
     - name: Slime_Attack_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 1
@@ -274,6 +279,7 @@ ScriptedImporter:
       spriteId: 70151c1fa6ac22c47a24bab8dba9e042
     - name: Slime_Attack_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 1
@@ -282,6 +288,7 @@ ScriptedImporter:
       spriteId: 8923dfed7680d1343ab96bfcb9c7dc3f
     - name: Slime_Attack_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 1
@@ -290,6 +297,7 @@ ScriptedImporter:
       spriteId: 58a2c0c817d3ad44ea612f4565f27151
     - name: Slime_Attack_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 1
@@ -299,6 +307,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 128}
